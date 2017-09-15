@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() onAdminSignIn: () => void;
   @Input() onAdminSignUp: () => void;
+  @Input() onTeamSignIn: () => void;
   constructor() { }
 
   ngOnInit() {

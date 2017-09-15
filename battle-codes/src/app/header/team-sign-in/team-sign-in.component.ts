@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-team-sign-in',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team-sign-in.component.css']
 })
 export class TeamSignInComponent implements OnInit {
-
+@Input() onTeamSignIn: () => void;
   constructor() { }
 
   ngOnInit() {

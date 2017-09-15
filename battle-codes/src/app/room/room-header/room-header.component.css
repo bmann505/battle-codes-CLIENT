@@ -1,0 +1,15 @@
+.logo {
+  height: 10vh;
+}
+
+.title {
+  height: 10vh;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  color: darkblue;
+  padding: 0px 15px;
+}
