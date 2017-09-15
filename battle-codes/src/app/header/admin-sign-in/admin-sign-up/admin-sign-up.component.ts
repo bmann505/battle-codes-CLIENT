@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-admin-sign-up',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-sign-up.component.css']
 })
 export class AdminSignUpComponent implements OnInit {
-
+@Input() onAdminSignUp: () => void;
   constructor() { }
 
   ngOnInit() {

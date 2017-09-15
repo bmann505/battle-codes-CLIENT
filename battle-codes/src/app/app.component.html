@@ -1,5 +1,17 @@
-<app-header></app-header>
-<app-about></app-about>
+<app-header
+  [onAdminSignIn]="onAdminSignIn.bind(this)"
+  [onAdminSignUp]="onAdminSignUp.bind(this)">
+</app-header>
+<app-about
+  [hidden]="adminSignIn">
+</app-about>
 <app-footer></app-footer>
-<app-admin-sign-in></app-admin-sign-in>
-<app-admin-sign-up></app-admin-sign-up>
+<app-admin-sign-in
+  [hidden]="adminSignUp"
+  [hidden]="!adminSignIn"
+  [onAdminSignUp]="onAdminSignUp.bind(this)">
+</app-admin-sign-in>
+<app-admin-sign-up
+  [hidden]="!adminSignUp">
+</app-admin-sign-up>
+<!-- <app-team-sign-in></app-team-sign-in> -->
