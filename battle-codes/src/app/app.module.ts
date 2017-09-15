@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminSignInComponent } from './header/admin-sign-in/admin-sign-in.component';
+import { AdminSignUpComponent } from './header/admin-sign-in/admin-sign-up/admin-sign-up.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AdminSignInComponent } from './header/admin-sign-in/admin-sign-in.compo
     HeaderComponent,
     AboutComponent,
     FooterComponent,
-    AdminSignInComponent
+    AdminSignInComponent,
+    AdminSignUpComponent
   ],
   imports: [
     BrowserModule
