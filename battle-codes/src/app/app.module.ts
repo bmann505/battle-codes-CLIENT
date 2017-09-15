@@ -11,6 +11,10 @@ import { TeamSignInComponent } from './header/team-sign-in/team-sign-in.componen
 import { RoomComponent } from './room/room.component';
 import { RoomHeaderComponent } from './room/room-header/room-header.component';
 import { ScoreboardComponent } from './room/scoreboard/scoreboard.component';
+import { TimerComponent } from './room/timer/timer.component';
+import { GradingComponent } from './room/grading/grading.component';
+import { SelectQuestionsComponent } from './room/select-questions/select-questions.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { ScoreboardComponent } from './room/scoreboard/scoreboard.component';
     TeamSignInComponent,
     RoomComponent,
     RoomHeaderComponent,
-    ScoreboardComponent
+    ScoreboardComponent,
+    TimerComponent,
+    GradingComponent,
+    SelectQuestionsComponent,
   ],
   imports: [
     BrowserModule
