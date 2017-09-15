@@ -14,6 +14,7 @@ import { ScoreboardComponent } from './room/scoreboard/scoreboard.component';
 import { TimerComponent } from './room/timer/timer.component';
 import { GradingComponent } from './room/grading/grading.component';
 import { SelectQuestionsComponent } from './room/select-questions/select-questions.component';
+import { QuestionListComponent } from './room/question-list/question-list.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { SelectQuestionsComponent } from './room/select-questions/select-questio
     TimerComponent,
     GradingComponent,
     SelectQuestionsComponent,
+    QuestionListComponent,
   ],
   imports: [
     BrowserModule

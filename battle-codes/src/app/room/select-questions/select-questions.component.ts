@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-select-questions',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-questions.component.css']
 })
 export class SelectQuestionsComponent implements OnInit {
-
+  @Input() onSelectQuestion: () => void;
   constructor() { }
 
   ngOnInit() {

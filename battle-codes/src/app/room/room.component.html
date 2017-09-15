@@ -1,7 +1,12 @@
 <app-room-header></app-room-header>
 <div class="row">
   <app-scoreboard></app-scoreboard>
-  <app-select-questions></app-select-questions>
+  <app-select-questions
+    [onSelectQuestion]="onSelectQuestion.bind(this)">
+  </app-select-questions>
+  <app-question-list
+    [hidden]="!selectQuestion">
+  </app-question-list>
   <app-grading></app-grading>
 </div>
 <app-timer></app-timer>

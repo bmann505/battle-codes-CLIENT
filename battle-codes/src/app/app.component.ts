@@ -9,6 +9,8 @@ export class AppComponent implements OnInit{
 adminSignIn = false;
 adminSignUp = false;
 teamSignIn = false;
+// selectQuestion = false;
+
   ngOnInit() {
   }
 
@@ -27,4 +29,10 @@ teamSignIn = false;
     this.adminSignIn = false;
     this.adminSignUp = false;
   }
+
+  // onSelectQuestion() {
+  //   console.log("something")
+  //   this.selectQuestion = true;
+  //
+  // }
   }
