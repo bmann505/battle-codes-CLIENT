@@ -2,12 +2,15 @@
 <div class="row">
   <app-scoreboard></app-scoreboard>
   <app-select-questions
-    [onSelectQuestion]="onSelectQuestion.bind(this)">
+    [onSelectQuestion]="onSelectQuestion.bind(this)"
+    [hidden]="buttonSelectQuestion">
   </app-select-questions>
   <app-question-list
     [hidden]="!selectQuestion">
   </app-question-list>
-  <app-grading></app-grading>
+  <app-grading
+    [hidden]="grade"
+  ></app-grading>
 </div>
 <app-timer></app-timer>
 <app-footer></app-footer>

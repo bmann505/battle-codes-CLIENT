@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
   selectQuestion = false;
+  buttonSelectQuestion = false;
+  grade = false;
 
 
   constructor() { }
@@ -16,6 +18,8 @@ export class RoomComponent implements OnInit {
 
   onSelectQuestion() {
     this.selectQuestion = true;
+    this.buttonSelectQuestion = true;
+    this.grade = true;
 
   }
 
