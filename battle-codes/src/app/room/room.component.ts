@@ -10,6 +10,7 @@ export class RoomComponent implements OnInit {
   buttonSelectQuestion = false;
   grade = true;
   postedQuestion = false;
+  timer = false;
 
 
   constructor() { }
@@ -30,6 +31,7 @@ export class RoomComponent implements OnInit {
     this.selectQuestion = false;
     this.buttonSelectQuestion = true;
     this.grade = false;
+    this.timer = true;
   }
 
   onStartNewRound() {

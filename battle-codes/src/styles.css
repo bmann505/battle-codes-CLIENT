@@ -50,3 +50,9 @@
   border: 3px solid rebeccapurple;
   margin-left: 10%;
 }
+
+.timer {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 3%;
+}
