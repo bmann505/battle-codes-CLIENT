@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RoomComponent implements OnInit {
   selectQuestion = false;
   buttonSelectQuestion = false;
-  grade = false;
+  grade = true;
+  postedQuestion = false;
 
 
   constructor() { }
@@ -20,7 +21,24 @@ export class RoomComponent implements OnInit {
     this.selectQuestion = true;
     this.buttonSelectQuestion = true;
     this.grade = true;
+    this.postedQuestion = false;
 
   }
 
+  onSubmitQuestion() {
+    this.postedQuestion = true;
+    this.selectQuestion = false;
+    this.buttonSelectQuestion = true;
+    this.grade = false;
+  }
+
+  onStartNewRound() {
+    this.buttonSelectQuestion = false;
+    this.grade = true;
+    this.postedQuestion = false;
+  }
+
+  onFinishGame() {
+    console.log("test")
+  }
 }

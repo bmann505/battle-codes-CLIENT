@@ -15,6 +15,9 @@ import { TimerComponent } from './room/timer/timer.component';
 import { GradingComponent } from './room/grading/grading.component';
 import { SelectQuestionsComponent } from './room/select-questions/select-questions.component';
 import { QuestionListComponent } from './room/question-list/question-list.component';
+import { PostedQuestionComponent } from './room/posted-question/posted-question.component';
+import { FinishGameComponent } from './room/finish-game/finish-game.component';
+import { TeamAnswerComponent } from './room/team-answer/team-answer.component';
 
 
 @NgModule({
@@ -33,6 +36,9 @@ import { QuestionListComponent } from './room/question-list/question-list.compon
     GradingComponent,
     SelectQuestionsComponent,
     QuestionListComponent,
+    PostedQuestionComponent,
+    FinishGameComponent,
+    TeamAnswerComponent,
   ],
   imports: [
     BrowserModule

@@ -1,12 +1,15 @@
 <div class="questionList col-sm-8">
-  <h2>Questions:</h2>
-  <table class="table table-striped row">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>Questions:</h2>
+    </div>
+  <table class="center-block table table-striped row">
     <thead>
       <tr>
-        <th class="col-sm-3">Category</th>
-        <th class="col-sm-4">Question</th>
-        <th class="col-sm-4">Answer</th>
-        <th class="col-sm-1">Select</th>
+        <th class="col-sm-4">Category</th>
+        <th class="col-sm-6">Question</th>
+        <th class="col-sm-6">Answer</th>
+        <th class="col-sm-2">Select</th>
       </tr>
     </thead>
     <tbody>
@@ -24,21 +27,27 @@
       </tr>
     </tbody>
   </table>
-    <form class="form-inline">
-      <div class="form-group ">
-        <select class="form-control">
-          <option disabled>Choose Category</option>
-          <option>2</option>
-        </select>
-      </div>
-      <div class="form-group ">
-        <label class="sr-only" for="addQuestion">Question</label>
+  </div>
+  <form class="form-inline">
+    <div class="form-group">
+      <select class="form-control col-sm-3 control-label">
+        <option disabled>Choose Category</option>
+        <option>2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="sr-only col-sm-2 control-label" for="addQuestion">Question</label>
+      <div class="col-xs-4">
         <input type="text" class="form-control" id="addQuestion" placeholder="Enter Question">
       </div>
-      <div class="form-group ">
-        <label class="sr-only" for="addAnswer">Answer</label>
+    </div>
+    <div class="form-group">
+      <label class="sr-only col-sm-2 control-label" for="addAnswer">Answer</label>
+      <div class="col-sm-10">
         <input type="text" class="form-control" id="addAnswer" placeholder="Enter Answer">
       </div>
-      <button type="submit" class="btn btn-default">Add</button>
-    </form>
+    </div>
+    <button type="submit" class="btn btn-default">Add</button>
+  </form>
+  <button class="btn btn-default pull-right" type="submit" (click)="onSubmitQuestion()">Submit</button>
 </div>

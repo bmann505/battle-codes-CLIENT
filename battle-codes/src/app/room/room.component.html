@@ -1,16 +1,23 @@
 <app-room-header></app-room-header>
 <div class="row">
   <app-scoreboard></app-scoreboard>
+  <app-posted-question
+    [hidden]="!postedQuestion">
+  </app-posted-question>
   <app-select-questions
     [onSelectQuestion]="onSelectQuestion.bind(this)"
     [hidden]="buttonSelectQuestion">
   </app-select-questions>
   <app-question-list
-    [hidden]="!selectQuestion">
+    [hidden]="!selectQuestion"
+    [onSubmitQuestion]="onSubmitQuestion.bind(this)">
   </app-question-list>
   <app-grading
     [hidden]="grade"
+    [onStartNewRound]="onStartNewRound.bind(this)"
   ></app-grading>
+  <app-team-answer></app-team-answer>
 </div>
 <app-timer></app-timer>
+<app-finish-game></app-finish-game>
 <app-footer></app-footer>

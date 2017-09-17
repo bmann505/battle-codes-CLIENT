@@ -1,19 +1,24 @@
 <div class="col-sm-8 grading">
-  <h2>Grade:</h2>
-  <table class="table table-striped row">
-    <thead>
-      <tr>
-        <th class="col-sm-4">Team</th>
-        <th class="col-sm-6">Answer</th>
-        <th class="col-sm-2">Right / Wrong</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>blah</th>
-        <th>blah</th>
-        <th><button class="btn btn-success glyphicon glyphicon-ok"></button> <button class="btn btn-danger glyphicon glyphicon-remove"></button></th>
-      </tr>
-    </tbody>
-  </table>
+  <div class="panel panel-default">
+    <div class="panel panel-heading">
+      <h2>Grade:</h2>
+    </div>
+    <table class="center-block table table-hover row">
+      <thead>
+        <tr>
+          <th class="col-sm-5">Team</th>
+          <th class="col-sm-6">Answer</th>
+          <th class="col-sm-6">Right / Wrong</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>blah</th>
+          <th>blah</th>
+          <th><button class="btn btn-success glyphicon glyphicon-ok"></button> <button class="btn btn-danger glyphicon glyphicon-remove"></button></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button type="submit" class="btn btn-default pull-right" (click)="onStartNewRound()">Start new round</button>
 </div>

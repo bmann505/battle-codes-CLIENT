@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grading',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grading.component.css']
 })
 export class GradingComponent implements OnInit {
-
+@Input() onStartNewRound: () => void;
   constructor() { }
 
   ngOnInit() {
