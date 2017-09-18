@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AdminSignUpComponent implements OnInit {
 @Input() onAdminSignUp: () => void;
+@Input() onAdminSubmitSignUp: () => void;
   constructor() { }
 
   ngOnInit() {

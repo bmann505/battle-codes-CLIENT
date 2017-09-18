@@ -1,4 +1,5 @@
-<!-- <app-room-header></app-room-header>
+<app-room-header></app-room-header>
+<app-timer [hidden]="!timer"></app-timer>
 <div class="row">
   <app-scoreboard></app-scoreboard>
   <app-posted-question
@@ -16,8 +17,6 @@
     [hidden]="grade"
     [onStartNewRound]="onStartNewRound.bind(this)"
   ></app-grading>
-  <app-team-answer></app-team-answer>
 </div>
-<app-timer></app-timer>
 <app-finish-game></app-finish-game>
-<app-footer></app-footer> -->
+<app-footer></app-footer>

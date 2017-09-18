@@ -12,15 +12,17 @@ import { RoomComponent } from './room/room.component';
 import { RoomHeaderComponent } from './room/room-header/room-header.component';
 import { ScoreboardComponent } from './room/scoreboard/scoreboard.component';
 import { TimerComponent } from './room/timer/timer.component';
-import { GradingComponent } from './room/grading/grading.component';
-import { SelectQuestionsComponent } from './room/select-questions/select-questions.component';
-import { QuestionListComponent } from './room/question-list/question-list.component';
+import { GradingComponent } from './room/admin-room/grading/grading.component';
+import { SelectQuestionsComponent } from './room/admin-room/select-questions/select-questions.component';
+import { QuestionListComponent } from './room/admin-room/question-list/question-list.component';
 import { PostedQuestionComponent } from './room/posted-question/posted-question.component';
-import { FinishGameComponent } from './room/finish-game/finish-game.component';
-import { TeamAnswerComponent } from './room/team-answer/team-answer.component';
+import { FinishGameComponent } from './room/admin-room/finish-game/finish-game.component';
+import { TeamAnswerComponent } from './room/team-room/team-answer/team-answer.component';
 import { CreateRoomComponent } from './home/create-room/create-room.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AdminRoomComponent } from './room/admin-room/admin-room.component';
+import { TeamRoomComponent } from './room/team-room/team-room.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
     TeamAnswerComponent,
     CreateRoomComponent,
     HomeComponent,
+    AdminRoomComponent,
+    TeamRoomComponent,
   ],
   imports: [
     BrowserModule,

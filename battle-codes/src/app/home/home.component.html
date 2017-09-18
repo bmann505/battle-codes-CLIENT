@@ -7,13 +7,14 @@
   [hidden]="adminSignUp"
   [hidden]="!adminSignIn"
   [onAdminSignUp]="onAdminSignUp.bind(this)"
-  [onAdminSubmit]="onAdminSubmit.bind(this)">
+  [onAdminSubmitSignIn]="onAdminSubmitSignIn.bind(this)">
 </app-admin-sign-in>
 <app-team-sign-in
   [hidden]="!teamSignIn">
 </app-team-sign-in>
 <app-admin-sign-up
-  [hidden]="!adminSignUp">
+  [hidden]="!adminSignUp"
+  [onAdminSubmitSignUp]="onAdminSubmitSignUp.bind(this)">
 </app-admin-sign-up>
 <app-about
   [hidden]="aboutTrivia">

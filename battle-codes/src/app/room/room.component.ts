@@ -6,11 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./room.component.css']
 })
 export class RoomComponent implements OnInit {
-  selectQuestion = false;
-  buttonSelectQuestion = false;
-  grade = true;
-  postedQuestion = false;
-  timer = false;
 
 
   constructor() { }
@@ -18,29 +13,4 @@ export class RoomComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelectQuestion() {
-    this.selectQuestion = true;
-    this.buttonSelectQuestion = true;
-    this.grade = true;
-    this.postedQuestion = false;
-
-  }
-
-  onSubmitQuestion() {
-    this.postedQuestion = true;
-    this.selectQuestion = false;
-    this.buttonSelectQuestion = true;
-    this.grade = false;
-    this.timer = true;
-  }
-
-  onStartNewRound() {
-    this.buttonSelectQuestion = false;
-    this.grade = true;
-    this.postedQuestion = false;
-  }
-
-  onFinishGame() {
-    console.log("test")
-  }
 }

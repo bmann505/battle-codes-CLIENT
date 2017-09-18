@@ -19,23 +19,33 @@ export class HomeComponent implements OnInit {
     onAdminSignIn() {
       this.adminSignIn = true;
       this.teamSignIn = false;
+      this.createRoom = false;
       }
 
     onAdminSignUp() {
       this.adminSignUp = true;
       this.teamSignIn = false;
+      this.createRoom = false;
       }
 
-    onAdminSubmit() {
+    onAdminSubmitSignIn() {
       this.createRoom = true;
       this.aboutTrivia = true;
       this.adminSignIn = false;
+    }
+
+    onAdminSubmitSignUp() {
+      this.createRoom = true;
+      this.aboutTrivia = true;
+      this.adminSignIn = false;
+      this.adminSignUp = false;
     }
 
     onTeamSignIn() {
       this.teamSignIn = true;
       this.adminSignIn = false;
       this.adminSignUp = false;
+      this.createRoom = false;
     }
 
 }
