@@ -18,7 +18,9 @@ import { QuestionListComponent } from './room/question-list/question-list.compon
 import { PostedQuestionComponent } from './room/posted-question/posted-question.component';
 import { FinishGameComponent } from './room/finish-game/finish-game.component';
 import { TeamAnswerComponent } from './room/team-answer/team-answer.component';
-
+import { CreateRoomComponent } from './create-room/create-room.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -39,9 +41,12 @@ import { TeamAnswerComponent } from './room/team-answer/team-answer.component';
     PostedQuestionComponent,
     FinishGameComponent,
     TeamAnswerComponent,
+    CreateRoomComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

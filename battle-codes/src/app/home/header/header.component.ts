@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
   @Input() onAdminSignIn: () => void;
   @Input() onAdminSignUp: () => void;
   @Input() onTeamSignIn: () => void;
+  @Input() onAdminSubmit: () => void;
+  
   constructor() { }
 
   ngOnInit() {

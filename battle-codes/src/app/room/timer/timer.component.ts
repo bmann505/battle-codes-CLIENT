@@ -27,7 +27,7 @@ export class TimerComponent implements OnInit {
           t => {
               this.ticks = t;
 
-              this.secondsDisplay = 60 - this.getSeconds(this.ticks);
+              this.secondsDisplay = 30 - this.getSeconds(this.ticks);
               this.minutesDisplay = this.getMinutes(this.ticks);
 
           }

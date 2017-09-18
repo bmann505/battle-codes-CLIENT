@@ -1,4 +1,4 @@
-<!-- <app-header
+<app-header
   [onAdminSignIn]="onAdminSignIn.bind(this)"
   [onAdminSignUp]="onAdminSignUp.bind(this)"
   [onTeamSignIn]="onTeamSignIn.bind(this)">
@@ -10,7 +10,7 @@
   [onAdminSubmit]="onAdminSubmit.bind(this)">
 </app-admin-sign-in>
 <app-team-sign-in
-  [hidden]="teamSignIn">
+  [hidden]="!teamSignIn">
 </app-team-sign-in>
 <app-admin-sign-up
   [hidden]="!adminSignUp">
@@ -22,8 +22,3 @@
   [hidden]="!createRoom">
 </app-create-room>
 <app-footer></app-footer>
-<app-room></app-room> -->
-
-<div class="">
-  <router-outlet></router-outlet>
-</div>
