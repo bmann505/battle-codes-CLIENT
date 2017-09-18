@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { HttpModule } from '@angular/http';
+=======
+>>>>>>> 83c1726bc44e9bdcd426fe629b162b57eb8f64bd
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/header/header.component';
