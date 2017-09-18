@@ -20,6 +20,8 @@
   [hidden]="aboutTrivia">
 </app-about>
 <app-create-room
-  [hidden]="!createRoom">
+  [hidden]="!createRoom"
+
+  [createNewRoom]="createNewRoom.bind(this)">
 </app-create-room>
 <app-footer></app-footer>
