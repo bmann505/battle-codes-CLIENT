@@ -6,8 +6,7 @@ import * as io from 'socket.io-client'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-@Input() newRoomName: () => void;
-
+  newRoomName = 'hhhhh';
   adminSignIn = false;
   adminSignUp = false;
   teamSignIn = false;
@@ -62,4 +61,7 @@ export class HomeComponent implements OnInit {
       this.socket.emit('room', data)
     }
 
+  //  newRoomName (){
+  //   console.log('passing from App')
+  //  }
 }

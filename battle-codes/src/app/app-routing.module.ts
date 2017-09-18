@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { AdminRoomComponent } from './room/admin-room/admin-room.component';
-import { TeamRoomComponent } from './room/team-room/team-room.component';
+import { AdminRoomComponent } from './home/room/admin-room/admin-room.component';
+import { TeamRoomComponent } from './home/room/team-room/team-room.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent },

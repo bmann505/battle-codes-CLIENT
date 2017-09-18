@@ -9,12 +9,14 @@ import { Component, OnInit, Input} from '@angular/core';
 export class CreateRoomComponent implements OnInit {
 room
 @Input() createNewRoom: () => void;
-@Input() newRoomName: () => void;
+@Input() newRoomName;
   constructor() { }
 
   ngOnInit() {
-    // this.roomName=this.room
+    // this.newRoomName = this.room;
+console.log(this.newRoomName);
 
   }
-
+// newRoomName = this.room
+// console.log(this.newRoomName);
 }

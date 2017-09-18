@@ -1,10 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { HttpModule } from '@angular/http';
-=======
->>>>>>> 83c1726bc44e9bdcd426fe629b162b57eb8f64bd
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/header/header.component';
@@ -13,21 +10,21 @@ import { FooterComponent } from './footer/footer.component';
 import { AdminSignInComponent } from './home/header/admin-sign-in/admin-sign-in.component';
 import { AdminSignUpComponent } from './home/header/admin-sign-in/admin-sign-up/admin-sign-up.component';
 import { TeamSignInComponent } from './home/header/team-sign-in/team-sign-in.component';
-import { RoomComponent } from './room/room.component';
-import { RoomHeaderComponent } from './room/room-header/room-header.component';
-import { ScoreboardComponent } from './room/scoreboard/scoreboard.component';
-import { TimerComponent } from './room/timer/timer.component';
-import { GradingComponent } from './room/admin-room/grading/grading.component';
-import { SelectQuestionsComponent } from './room/admin-room/select-questions/select-questions.component';
-import { QuestionListComponent } from './room/admin-room/question-list/question-list.component';
-import { PostedQuestionComponent } from './room/posted-question/posted-question.component';
-import { FinishGameComponent } from './room/admin-room/finish-game/finish-game.component';
-import { TeamAnswerComponent } from './room/team-room/team-answer/team-answer.component';
+import { RoomComponent } from './home/room/room.component';
+import { RoomHeaderComponent } from './home/room/room-header/room-header.component';
+import { ScoreboardComponent } from './home/room/scoreboard/scoreboard.component';
+import { TimerComponent } from './home/room/timer/timer.component';
+import { GradingComponent } from './home/room/admin-room/grading/grading.component';
+import { SelectQuestionsComponent } from './home/room/admin-room/select-questions/select-questions.component';
+import { QuestionListComponent } from './home/room/admin-room/question-list/question-list.component';
+import { PostedQuestionComponent } from './home/room/posted-question/posted-question.component';
+import { FinishGameComponent } from './home/room/admin-room/finish-game/finish-game.component';
+import { TeamAnswerComponent } from './home/room/team-room/team-answer/team-answer.component';
 import { CreateRoomComponent } from './home/create-room/create-room.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AdminRoomComponent } from './room/admin-room/admin-room.component';
-import { TeamRoomComponent } from './room/team-room/team-room.component';
+import { AdminRoomComponent } from './home/room/admin-room/admin-room.component';
+import { TeamRoomComponent } from './home/room/team-room/team-room.component';
 
 @NgModule({
   declarations: [

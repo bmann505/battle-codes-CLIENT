@@ -3,7 +3,7 @@
     <div class="form-group">
       <label for="room">Room Name</label>
       <input [(ngModel)]="room" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="room" >
-      <button (click)="newRoomName()" type="submit" class="btn btn-default" routerLink="admin">Create Room</button>
+      <button (click)="createNewRoom(room)" type="submit" class="btn btn-default" routerLink="admin">Create Room</button>
     </div>
   </form>
 </div>
