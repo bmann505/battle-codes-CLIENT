@@ -1,6 +1,5 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -8,17 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">
+      <div class="navbar-brand">
        <img alt="Brand" src="https://media2.fdncms.com/riverfronttimes/imager/u/original/3714185/2c1d11cf_trivia.png" class="logo img-responsive">
-     </a>
-
-      <a class="navbar-brand title navbar-text">BATTLE-CODES-ROYALE</a>
+      </div>
+      <h1 class="navbar-brand title navbar-text">BATTLE<code>&lt;CODE&gt;</code>ROYALE</h1>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse signinButtons" id="bs-example-navbar-collapse-1">
       <button class="navbar-right btn-space btn btn-primary navbar-btn" (click)="onAdminSignIn()">admin sign-in</button>
       <button class="navbar-right btn-space btn btn-primary navbar-btn" (click)="onTeamSignIn()">team sign-in</button>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
