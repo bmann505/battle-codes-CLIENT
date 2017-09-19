@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AdminRoomComponent } from './home/room/admin-room/admin-room.component';
 import { TeamRoomComponent } from './home/room/team-room/team-room.component';
+import { roomService } from './room.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { TeamRoomComponent } from './home/room/team-room/team-room.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [roomService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

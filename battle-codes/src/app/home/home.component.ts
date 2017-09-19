@@ -1,18 +1,18 @@
 import { Component, OnInit, Input } from '@angular/core';
-import * as io from 'socket.io-client'
+// import * as io from 'socket.io-client'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  newRoomName = 'hhhhh';
+  newRoomName = '';
   adminSignIn = false;
   adminSignUp = false;
   teamSignIn = false;
   createRoom = false;
   aboutTrivia = false;
-  socket = null;
+  // socket = null;
 
     ngOnInit() {
     }
@@ -51,15 +51,17 @@ export class HomeComponent implements OnInit {
       this.createRoom = false;
     }
 
-    createNewRoom(room) {
-      this.socket = io('http://localhost:3000/')
-      let data = {
-        room: room,
-        handle: '',
-        message: ''
-      }
-      this.socket.emit('room', data)
-    }
+    // createNewRoom(room) {
+    //   this.newRoomName=room
+    //   console.log(  this.newRoomName)
+    //   this.socket = io('http://localhost:3000/')
+    //   let data = {
+    //     room: room,
+    //     handle: '',
+    //     message: ''
+    //   }
+    //   this.socket.emit('room', data)
+    // }
 
   //  newRoomName (){
   //   console.log('passing from App')
