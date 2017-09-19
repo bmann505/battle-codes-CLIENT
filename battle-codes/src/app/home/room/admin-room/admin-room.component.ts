@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { timerService } from 'app/home/room/timer/timer.service';
 @Component({
   selector: 'app-admin-room',
   templateUrl: './admin-room.component.html',
@@ -12,7 +12,7 @@ export class AdminRoomComponent implements OnInit {
   postedQuestion = false;
   timer = false;
 
-  constructor() { }
+  constructor(private timerService: timerService) { }
 
   ngOnInit() {
   }
@@ -30,6 +30,7 @@ export class AdminRoomComponent implements OnInit {
     this.buttonSelectQuestion = true;
     this.grade = false;
     this.timer = true;
+    this.timerService.startTimer();
   }
 
   onStartNewRound() {
