@@ -16,7 +16,7 @@ constructor(private roomService: roomService) {}
   }
 createNewRoom(room){
   this.roomService.createNewRoom(room);
-  this.roomService.roomCreated.emit(room);
+  this.roomService.roomCreated(room);
 }
 
 // newRoomName = this.room
