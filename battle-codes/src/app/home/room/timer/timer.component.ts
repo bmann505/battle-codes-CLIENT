@@ -32,7 +32,6 @@ export class TimerComponent implements OnInit {
               this.ticks = t;
 
               this.secondsDisplay = 30 - this.getSeconds(this.ticks);
-              this.minutesDisplay = this.getMinutes(this.ticks);
 
           }
       );
@@ -42,9 +41,9 @@ export class TimerComponent implements OnInit {
       return this.pad(ticks % 60);
   }
 
-  private getMinutes(ticks: number) {
-       return this.pad((Math.floor(ticks / 60)) % 60);
-  }
+  // private getMinutes(ticks: number) {
+  //      return this.pad((Math.floor(ticks / 60)) % 60);
+  // }
 
   private pad(digit: any) {
       return digit <= 9 ? '0' + digit : digit;

@@ -6,24 +6,13 @@ import { roomService } from 'app/room.service';
   styleUrls: ['./room-header.component.css']
 })
 export class RoomHeaderComponent implements OnInit {
-   room  ="nn"
+   room  =this.roomService.room.name
 
   constructor(private roomService: roomService) {
-    this.roomService.roomCreated.subscribe(
-    (status) => {
-       this.room=status
-
-  
-    }
-);
 
   }
 
-
   ngOnInit() {
-    setTimeout(() => {
-      this.room = "gggggg";
-    }, 3000);
 
   }
 

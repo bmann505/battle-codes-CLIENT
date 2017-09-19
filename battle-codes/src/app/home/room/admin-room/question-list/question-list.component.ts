@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
+
 @Input() onSubmitQuestion: () => void;
   constructor() { }
 
