@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class QuestionListComponent implements OnInit {
 @Input() onSubmitQuestion: () => void;
+@Input() startTimer: () => void;
   constructor() { }
 
   ngOnInit() {
