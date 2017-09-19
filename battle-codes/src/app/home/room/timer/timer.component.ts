@@ -17,7 +17,7 @@ export class TimerComponent implements OnInit {
   sub: Subscription;
 
   ngOnInit() {
-      this.startTimer();
+      // this.startTimer();
   }
 
   private startTimer() {

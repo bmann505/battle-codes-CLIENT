@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-admin-room',
@@ -11,7 +11,7 @@ export class AdminRoomComponent implements OnInit {
   grade = true;
   postedQuestion = false;
   timer = false;
-
+  @Input() startTimer: () => void;
   constructor() { }
 
   ngOnInit() {
@@ -30,6 +30,7 @@ export class AdminRoomComponent implements OnInit {
     this.buttonSelectQuestion = true;
     this.grade = false;
     this.timer = true;
+    this.startTimer();
   }
 
   onStartNewRound() {
