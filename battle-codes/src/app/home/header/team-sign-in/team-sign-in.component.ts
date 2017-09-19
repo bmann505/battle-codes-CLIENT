@@ -12,12 +12,8 @@ export class TeamSignInComponent implements OnInit {
   ngOnInit() {
   }
  joinRoom(room){
-   let data ={
-     room:room,
-     name:'',
-     message:''
-   }
-   this.roomService.joinRoom(data)
-   this.roomService.roomCreated(data.room);
+
+   this.roomService.createNewRoom(room)
+   this.roomService.roomCreated(room);
  }
 }
