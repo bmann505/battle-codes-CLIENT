@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "https://fonts.googleapis.com/css?family=Roboto+Mono",
+        
         "styles.css"
       ],
       "scripts": [],

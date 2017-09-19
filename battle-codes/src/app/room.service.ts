@@ -19,15 +19,27 @@ export class roomService {
     }
     socket.emit('room', data)
   };
-  joinRoom(data) {
-    let socket
-      socket = io('http://localhost:3000/')
-      socket.on('message',data)
-      console.log('i am in room ',data.room)
-  }
+
+joinRoom(data) {
+  let socket
+    socket = io('http://localhost:3000/')
+    socket.on('message',data)
+    console.log('i am in room ',data.room)
+}
 
 roomCreated(roomName) {
   this.room.name=roomName
 }
 
+emitQuestions(question) {
+let socket = io('http://localhost:3000/');
+let data = {
+  room: this.room.name,
+  handle: '',
+  message: '',
+  question: question
+  }
+  socket.emit('room', data)
+  console.log(data)
+}
 }

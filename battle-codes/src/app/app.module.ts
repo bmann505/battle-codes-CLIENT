@@ -26,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminRoomComponent } from './home/room/admin-room/admin-room.component';
 import { TeamRoomComponent } from './home/room/team-room/team-room.component';
 import { roomService } from './room.service';
+// import { timerService } from './timer.service';
 
 @NgModule({
   declarations: [

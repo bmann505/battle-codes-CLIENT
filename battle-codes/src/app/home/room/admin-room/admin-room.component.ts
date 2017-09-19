@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { roomService } from 'app/room.service'
+
 
 @Component({
   selector: 'app-admin-room',
@@ -12,7 +14,7 @@ export class AdminRoomComponent implements OnInit {
   postedQuestion = false;
   timer = false;
   @Input() startTimer: () => void;
-  constructor() { }
+  constructor(private roomService: roomService) { }
 
   ngOnInit() {
   }
@@ -24,13 +26,13 @@ export class AdminRoomComponent implements OnInit {
     this.postedQuestion = false;
   }
 
-  onSubmitQuestion() {
+  onSubmitQuestion( question) {
     this.postedQuestion = true;
     this.selectQuestion = false;
     this.buttonSelectQuestion = true;
     this.grade = false;
     this.timer = true;
-    this.startTimer();
+    this.roomService.emitQuestions(question);
   }
 
   onStartNewRound() {
