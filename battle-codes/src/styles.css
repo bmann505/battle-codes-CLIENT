@@ -1,11 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar {
+  background-color: #3985FA;
+}
+
+.navbar-brand {
+  color: white!important;
+}
+
 .logo {
   height: 10vh;
+}
+
+.logo-title {
+  padding-right: 1em;
+  color: white!important;
 }
 
 .title {
   height: 10vh;
   font-size: 2em;
+  color: white!important;
+  font-family: sans-serif;
   display: flex;
   align-items: center;
 }
@@ -16,9 +31,15 @@
   /*border: 3px solid rebeccapurple;*/
 }
 
+.signinButtons {
+    margin-top: 1.5em;
+}
+
 .btn-space {
-    margin-left: 1%;
-    margin-top: 2.5em;
+  margin-left: 1%;
+  background-color: #ABD2FA;
+  color: black;
+  font-weight: bold;
 }
 
 .grading {

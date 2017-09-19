@@ -1,5 +1,5 @@
 <div class="timer pull-right com-sm-4">
   <h1>
-    {{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}} : {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}} <br/>
+    {{(minutesDisplay) ? minutesDisplay : '00'}} : {{(secondsDisplay <= 30) && (secondsDisplay >= 00) ? secondsDisplay : '00'}} <br/>
   </h1>
 </div>
