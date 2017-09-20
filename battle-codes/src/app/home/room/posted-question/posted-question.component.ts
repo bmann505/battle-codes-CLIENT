@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { roomService } from 'app/room.service';
+import { questionsService } from 'app/questions.service'
 import * as io from 'socket.io-client'
 @Component({
   selector: 'app-posted-question',
@@ -24,11 +25,11 @@ export class PostedQuestionComponent implements OnInit {
     message:"",
     question: ""
   }
-  console.log(data);
+  // console.log(data);
   this.socket.emit('room', data);
 
     this.socket.on('message', (data)=> {
-   console.log(data);
+  //  console.log(this.questionsService.questions);
    this.question=data.question
  })
 }

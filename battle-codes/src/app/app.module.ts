@@ -29,6 +29,7 @@ import { AdminRoomComponent } from './home/room/admin-room/admin-room.component'
 import { TeamRoomComponent } from './home/room/team-room/team-room.component';
 import { roomService } from './room.service';
 import { timerService } from './home/room/timer/timer.service';
+import { questionsService } from './questions.service'
 
 @NgModule({
   declarations: [
@@ -61,7 +62,7 @@ import { timerService } from './home/room/timer/timer.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [timerService, roomService, AuthService, AuthGuard],
+  providers: [timerService, roomService, AuthService, AuthGuard, questionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
