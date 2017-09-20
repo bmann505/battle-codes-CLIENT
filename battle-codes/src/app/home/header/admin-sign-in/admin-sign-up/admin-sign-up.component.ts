@@ -18,9 +18,4 @@ export class AdminSignUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  OnSignup(form: NgForm){
-    const email = form.value.adminSignUpEmail;
-    const password = form.value.adminSignUpPassword;
-  }
-
 }

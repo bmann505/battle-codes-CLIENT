@@ -1,5 +1,5 @@
 import { EventEmitter } from '@angular/core';
-// import * as io from 'socket.io-client'
+import * as io from 'socket.io-client'
 export class roomService {
 
 
@@ -15,7 +15,7 @@ export class roomService {
   createNewRoom(room) {
 
     let socket
-    // socket = io('http://localhost:3000/')
+    socket = io('http://localhost:3000/')
     let data = {
       room: room,
       handle: '',
