@@ -9,11 +9,14 @@ export class TeamSignInComponent implements OnInit {
 @Input() onTeamSignIn: () => void;
   constructor(private roomService: roomService) {}
   room=this.roomService.room.name
+
   ngOnInit() {
   }
- joinRoom(room){
+ joinRoom(teamName, room){
 
-   this.roomService.createNewRoom(room)
+  //  this.roomService.createNewRoom(room)
    this.roomService.roomCreated(room);
+      this.roomService.teamCreated(teamName);
+      console.log(this.roomService.team.name)
  }
 }

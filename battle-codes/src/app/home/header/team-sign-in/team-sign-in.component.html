@@ -3,7 +3,9 @@
     <div class="form-group">
       <label for="room">Room Name</label>
       <input [(ngModel)]="room" name="room" type="text" class="form-control" id="room" >
-      <button (click)="joinRoom(room)" type="button" class="btn btn-default" routerLink="team">Join Room</button>
+        <label for="room">Team Name</label>
+        <input [(ngModel)]="teamName" name="teamName" type="text" class="form-control" id="teamName" >
+      <button (click)="joinRoom(teamName,room)" type="button" class="btn btn-default" routerLink="team">Join Room</button>
     </div>
   </form>
 </div>

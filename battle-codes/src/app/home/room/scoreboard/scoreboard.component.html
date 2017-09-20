@@ -12,10 +12,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>blah</th>
-          <th>blah</th>
-          <th>blah</th>
+        <tr *ngFor="let team of teams">
+          <th></th>
+          <th>{{team.handle}}</th>
+          <th>{{team.score}}</th>
         </tr>
       </tbody>
     </table>

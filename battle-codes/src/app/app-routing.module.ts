@@ -8,7 +8,7 @@ import { AuthGuard } from './home/header/auth-guard.service';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent },
-  {path: 'admin', component: AdminRoomComponent, canActivate: [AuthGuard] },
+  {path: 'admin', component: AdminRoomComponent },
   {path: 'team', component: TeamRoomComponent }
 ];
 
