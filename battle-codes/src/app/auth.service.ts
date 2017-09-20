@@ -1,26 +1,32 @@
 export class AuthService {
 
-async signUp(name: string, email: string, password: string) {
+ signUp(name: string, email: string, password: string) {
+  // let name = form.value.name
+  // let email = form.value.email;
+  // let password = form.value.password;
+    console.log("data")
+      const post = {
+        "name": name,
+        "email": email,
+        "password": password
+      }
+      const settings = {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(post)
+      }
 
-  let emailBody = form.value.body;
-  let emailSubject = form.value.subject
-  const post = {
-    "body": emailBody,
-    "subject": emailSubject
+       fetch('http://localhost:3000/signup', settings).then((data) => {
+        console.log(data)
+      })
+
+      // const refresh = await fetch('http://localhost:3000/signup')
+      // const res = await refresh.json()
+
+      // localStorage.setItem('token', res.data)
+      // console.log(localStorage.getItem('token'))
+      // form.reset();
+    }
   }
-  const settings = {
-    method: "POST",
-    headers: {
-      "content-type": "application/json"
-    },
-    body: JSON.stringify(post)
-  }
-  const data = await fetch(`${baseURL}/messages`, settings)
-  const refresh = await fetch(`${baseURL}/messages`)
-  const res = await refresh.json()
-  const messages = res._embedded.messages
-  this.messages = messages
-  form.reset();
-}
-}
-}

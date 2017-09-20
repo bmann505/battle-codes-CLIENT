@@ -9,8 +9,8 @@ import { AboutComponent } from './home/about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminSignInComponent } from './home/header/admin-sign-in/admin-sign-in.component';
 import { AdminSignUpComponent } from './home/header/admin-sign-in/admin-sign-up/admin-sign-up.component';
-import { AuthService } from './home/header/auth.service';
-import { AuthGuard } from './home/header/auth-guard.service';
+import { AuthService } from './auth.service';
+
 import { TeamSignInComponent } from './home/header/team-sign-in/team-sign-in.component';
 import { RoomComponent } from './home/room/room.component';
 import { RoomHeaderComponent } from './home/room/room-header/room-header.component';
@@ -30,6 +30,7 @@ import { TeamRoomComponent } from './home/room/team-room/team-room.component';
 import { roomService } from './room.service';
 import { timerService } from './home/room/timer/timer.service';
 import { questionsService } from './questions.service'
+
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { questionsService } from './questions.service'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [timerService, roomService, AuthService, AuthGuard, questionsService],
+  providers: [timerService, roomService, AuthService, questionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

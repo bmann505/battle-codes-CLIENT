@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {AuthService } from 'app/auth.service'
 // import * as io from 'socket.io-client'
 @Component({
   selector: 'app-home',
@@ -6,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   newRoomName = '';
   adminSignIn = false;
   adminSignUp = false;
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
   createRoom = false;
   aboutTrivia = false;
   // socket = null;
-
+    constructor(private AuthService: AuthService) { }
     ngOnInit() {
     }
 
@@ -37,11 +39,12 @@ export class HomeComponent implements OnInit {
       this.adminSignIn = false;
     }
 
-    onAdminSubmitSignUp() {
+    onAdminSubmitSignUp(name, email, password) {
       this.createRoom = true;
       this.aboutTrivia = false;
       this.adminSignIn = false;
       this.adminSignUp = false;
+      this.AuthService.signUp(name , email , password)
     }
 
     onTeamSignIn() {

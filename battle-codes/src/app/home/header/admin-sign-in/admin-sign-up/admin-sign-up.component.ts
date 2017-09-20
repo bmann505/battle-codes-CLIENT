@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { AuthService } from '../../auth.service';
+import { AuthService } from 'app/auth.service';
 
 
 
@@ -17,5 +17,6 @@ export class AdminSignUpComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }
