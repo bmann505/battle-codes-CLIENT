@@ -12,10 +12,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th>blah</th>
-          <th>blah</th>
-          <th><button class="btn btn-success glyphicon glyphicon-ok"></button> <button class="btn btn-danger glyphicon glyphicon-remove"></button></th>
+        <tr *ngFor="let team of teams">
+          <th>{{team.handle}}</th>
+          <th>{{team.message}}</th>
+          <th><button (click)="gradeUp(team)" class="btn btn-success glyphicon glyphicon-ok"></button> <button class="btn btn-danger glyphicon glyphicon-remove"></button></th>
         </tr>
       </tbody>
     </table>
