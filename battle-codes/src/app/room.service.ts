@@ -24,7 +24,7 @@ export class roomService {
       score: 0
     }
     socket.emit('room', data)
-    console.log(data)
+    // console.log(data)
   };
 
 resRoom() {
@@ -32,7 +32,7 @@ resRoom() {
   let socket = io('http://localhost:3000/');
   socket.on('message',  (data) =>{
 
-    console.log(data)
+    // console.log(data)
    return data.message
     });
 
@@ -55,7 +55,7 @@ let data = {
   score: 0
   }
   socket.emit('room', data)
-  console.log(data)
+  // console.log(data)
 }
 
 
@@ -67,10 +67,10 @@ resDataFromTeam(socket){
   question: "",
   score :0
 }
-console.log(data);
+// console.log(data);
 socket.emit('room', data);
   socket.on('message', (data)=> {
- console.log(data);
+ // console.log(data);
  if ( data.message != "") {
 // this.teams.push(data)
 this.pushifNotExist(data,this.teams)
@@ -81,7 +81,7 @@ this.pushifNotExist(data,this.teams)
 }
 
 pushifNotExist(data,teams){
- console.log(teams)
+ // console.log(teams)
  var seen = false;
  for(var i = 0; i != teams.length; ++i) {
      if(teams[i].handle == data.handle) {

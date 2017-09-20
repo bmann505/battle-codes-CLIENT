@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { questionsService } from 'app/questions.service';
 
 @Component({
   selector: 'app-question-list',
@@ -8,9 +9,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class QuestionListComponent implements OnInit {
 
 @Input() onSubmitQuestion: () => void;
-  constructor() { }
+  constructor(private questionsService: questionsService )  { }
+  questions = this.questionsService.questions
 
   ngOnInit() {
+    
   }
-
+radioTest(question) {
+  this.questionsService.selectedQuestion = question.question
+}
 }
