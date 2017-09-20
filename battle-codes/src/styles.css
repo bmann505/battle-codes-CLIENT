@@ -11,6 +11,11 @@
   height: 10vh;
 }
 
+.about {
+  height:70.3vh;
+  padding: 3%;
+}
+
 .logo-title {
   padding-right: 1em;
   color: white!important;

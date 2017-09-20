@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
-
+import { timerService } from './timer.service';
 
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
-  styleUrls: ['./timer.component.css']
+  styleUrls: ['./timer.component.css'],
+  providers: [timerService],
 })
 export class TimerComponent implements OnInit {
+
+  constructor (private timerService: timerService) {}
 
   ticks = 0;
 
@@ -17,7 +20,8 @@ export class TimerComponent implements OnInit {
   sub: Subscription;
 
   ngOnInit() {
-      // this.startTimer();
+      this.startTimer();
+      // this.timerService.startTimer()
   }
 
   private startTimer() {

@@ -1,6 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+import { AuthService } from '../../auth.service';
+
+
+
 @Component({
   selector: 'app-admin-sign-up',
   templateUrl: './admin-sign-up.component.html',
@@ -9,13 +13,12 @@ import { NgForm } from '@angular/forms';
 export class AdminSignUpComponent implements OnInit {
 @Input() onAdminSignUp: () => void;
 @Input() onAdminSubmitSignUp: () => void;
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
   OnSignup(form: NgForm){
-    const name = form.value.adminSignUpName;
     const email = form.value.adminSignUpEmail;
     const password = form.value.adminSignUpPassword;
   }
