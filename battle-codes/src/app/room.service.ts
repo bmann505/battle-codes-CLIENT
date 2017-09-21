@@ -31,8 +31,6 @@ resRoom() {
 
   let socket = io('http://localhost:3000/');
   socket.on('message',  (data) =>{
-
-    // console.log(data)
    return data.message
     });
 
@@ -55,7 +53,6 @@ let data = {
   score: 0
   }
   socket.emit('room', data)
-  // console.log(data)
 }
 
 
@@ -67,12 +64,9 @@ resDataFromTeam(socket){
   question: "",
   score :0
 }
-// console.log(data);
 socket.emit('room', data);
   socket.on('message', (data)=> {
- // console.log(data);
  if ( data.message != "") {
-// this.teams.push(data)
 this.pushifNotExist(data,this.teams)
  }
 
@@ -80,14 +74,12 @@ this.pushifNotExist(data,this.teams)
 
 }
 
-pushifNotExist(data,teams){
- // console.log(teams)
+pushifNotExist(data, teams){
  var seen = false;
  for(var i = 0; i != teams.length; ++i) {
      if(teams[i].handle == data.handle) {
        seen = true;
        teams[i].message = data.message
-
      }
      if (teams[i].handle == data.handle && data.score !=0) {
            teams[i].score = data.score

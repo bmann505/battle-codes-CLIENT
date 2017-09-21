@@ -33,10 +33,11 @@ export class HomeComponent implements OnInit {
       this.aboutTrivia = false;
       }
 
-    onAdminSubmitSignIn() {
+    onAdminSubmitSignIn(email, password) {
       this.createRoom = true;
       this.aboutTrivia = false;
       this.adminSignIn = false;
+      this.AuthService.signIn(email, password)
     }
 
     onAdminSubmitSignUp(name, email, password) {
