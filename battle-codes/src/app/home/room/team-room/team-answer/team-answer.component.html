@@ -2,6 +2,6 @@
   <form class="" action="index.html" method="post">
     <label>Answer:</label>
     <textarea [(ngModel)]="answer" name="answer" class="form-control" rows="5"></textarea>
-    <button (click)="emitAnswer(answer)" type="submit" class="btn btn-default pull-right">Send</button>
+    <button [disabled]="ToggleButton" (click)="emitAnswer(answer)" type="submit" class="btn btn-default pull-right">Send</button>
   </form>
 </div>

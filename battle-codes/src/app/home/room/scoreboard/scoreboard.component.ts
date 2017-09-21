@@ -12,7 +12,7 @@ export class ScoreboardComponent implements OnInit {
 teams=this.roomService.teams
   ngOnInit() {
 
-
+console.log(this.roomService.flag.stat)
 this.roomService.resDataFromTeam(this.socket)
   }
 
