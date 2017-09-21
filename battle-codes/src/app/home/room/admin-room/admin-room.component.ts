@@ -21,19 +21,21 @@ export class AdminRoomComponent implements OnInit {
   }
 
   onSelectQuestion() {
-    this.selectQuestion = true;
-    this.buttonSelectQuestion = true;
-    this.grade = true;
-    this.postedQuestion = false;
+     this.selectQuestion = true;
+     this.buttonSelectQuestion = true;
+     this.grade = true;
+     this.postedQuestion = false;
   }
 
-  onSubmitQuestion() {
+
+  onSubmitQuestion(question) {
+    console.log(question)
     this.postedQuestion = true;
     this.selectQuestion = false;
     this.buttonSelectQuestion = true;
     this.grade = false;
     this.timer = true;
-    this.roomService.emitQuestions(this.questionsService.selectedQuestion);
+    this.roomService.emitQuestions(question);
   }
 
   onStartNewRound() {

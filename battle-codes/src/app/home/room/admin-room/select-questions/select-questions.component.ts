@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { questionsService } from 'app/questions.service';
 @Component({
   selector: 'app-select-questions',
   templateUrl: './select-questions.component.html',
@@ -7,10 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SelectQuestionsComponent implements OnInit {
   @Input() onSelectQuestion: () => void;
-
-  constructor() { }
+  questions
+  constructor(private questionsService: questionsService) { }
 
   ngOnInit() {
+    console.log(this.questionsService.questions.length)
+    if (this.questionsService.questions.length !== 0 ) {
+  this.questions = this.questionsService.questions
+    }
+
   }
 
 }

@@ -7,15 +7,26 @@ import { questionsService } from 'app/questions.service';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
-
+questions
 @Input() onSubmitQuestion: () => void;
   constructor(private questionsService: questionsService )  { }
-  questions = this.questionsService.questions
 
+ selectedQ
   ngOnInit() {
-    
+    fetch('http://localhost:3000/questions')
+    .then((data) => {
+     return data.json()
+   })
+   .then(res => {
+     console.log(res)
+     this.questions = res;
+    //  console.log(this.questionsService.questions)
+    this.questionsService.questions= this.questions
+  })
   }
+
+
 radioTest(question) {
-  this.questionsService.selectedQuestion = question.question
+  this.selectedQ = question.question_title
 }
 }

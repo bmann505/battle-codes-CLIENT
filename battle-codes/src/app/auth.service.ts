@@ -13,7 +13,6 @@ export class AuthService {
         },
         body: JSON.stringify(post)
       }
-
        fetch('http://localhost:3000/signup', settings)
        .then((data) => {
         return data.json()
@@ -41,9 +40,12 @@ signIn(email: string, password: string) {
     return data.json()
   })
   .then(res => {
+    if(res.error) {
+      alert(res.error)
+    } else {
     localStorage.setItem('token', res.data)
+  }
   })
-
 }
 
   }
