@@ -13,7 +13,7 @@ questions
 
  selectedQ
   ngOnInit() {
-    fetch('http://localhost:3000/questions')
+    fetch('https://rocky-castle-86279.herokuapp.com/questions')
     .then((data) => {
      return data.json()
    })

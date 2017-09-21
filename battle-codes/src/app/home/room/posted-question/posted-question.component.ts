@@ -11,7 +11,7 @@ export class PostedQuestionComponent implements OnInit {
   room = this.roomService.room.name
   question="hi i am aquestion"
 
-    socket=io('http://localhost:3000')
+    socket=io('https://rocky-castle-86279.herokuapp.com/')
   constructor(private roomService: roomService) {
 
 
@@ -25,12 +25,13 @@ export class PostedQuestionComponent implements OnInit {
     message:"",
     question: ""
   }
-  // console.log(data);
   this.socket.emit('room', data);
 
     this.socket.on('message', (data)=> {
-  //  console.log(this.questionsService.questions);
-   this.question=data.question
+  if (data.question !="") {
+       this.question=data.question
+  }
+
  })
 }
 

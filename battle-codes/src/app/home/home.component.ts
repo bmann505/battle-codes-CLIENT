@@ -34,14 +34,22 @@ export class HomeComponent implements OnInit {
       }
 
     onAdminSubmitSignIn(email, password) {
-      this.createRoom = true;
+      if (email !== undefined || password !== undefined){
+          this.createRoom = true;
+      } else {
+        this.createRoom = false;
+      }
       this.aboutTrivia = false;
       this.adminSignIn = false;
       this.AuthService.signIn(email, password)
     }
 
     onAdminSubmitSignUp(name, email, password) {
-      this.createRoom = true;
+      if (name !== undefined || email !== undefined || password !== undefined){
+          this.createRoom = true;
+      } else {
+        this.createRoom = false;
+      }
       this.aboutTrivia = false;
       this.adminSignIn = false;
       this.adminSignUp = false;

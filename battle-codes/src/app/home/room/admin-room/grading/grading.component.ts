@@ -7,7 +7,7 @@ import * as io from 'socket.io-client'
   styleUrls: ['./grading.component.css']
 })
 export class GradingComponent implements OnInit {
-    socket=io('http://localhost:3000')
+    socket=io('https://rocky-castle-86279.herokuapp.com/')
 @Input() onStartNewRound: () => void;
 
  teams=this.roomService.teams

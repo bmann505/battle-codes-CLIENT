@@ -1,15 +1,16 @@
-<div class="questionList col-sm-8">
+<div class=" col-sm-8">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2>Questions:</h2>
     </div>
+  <div class="questionList">
   <table class="center-block table row">
     <thead>
       <tr>
-        <th class="col-sm-4">Category</th>
-        <th class="col-sm-6">Question</th>
-        <th class="col-sm-6">Answer</th>
-        <th class="col-sm-2">Select</th>
+        <th class="col-sm-4 tableTitle">Category:</th>
+        <th class="col-sm-6 tableTitle">Question:</th>
+        <th class="col-sm-6 tableTitle">Answer:</th>
+        <th class="col-sm-2 tableTitle">Select:</th>
       </tr>
     </thead>
     <tbody>
@@ -27,18 +28,21 @@
       </tr>
     </tbody>
   </table>
+</div>
+<button class="btn btn-default pull-right" type="submit" (click)="onSubmitQuestion(selectedQ)"><span class="glyphicon glyphicon-send"></span> Submit</button>
   </div>
-  <form class="form-inline">
+  <form class="form-inline row container breadcrumb">
+    <h4>Create your own:</h4>
     <div class="form-group">
-      <select class="form-control col-sm-3 control-label">
-        <option disabled>Choose Category</option>
-        <option>2</option>
-      </select>
+     <label class="sr-only control-label" for="addCategory">Category</label>
+     <div>
+       <input  name="category" type="text" class="form-control" id="addCategory" placeholder="Enter Category">
+     </div>
     </div>
     <div class="form-group">
       <label class="sr-only col-sm-2 control-label" for="addQuestion">Question</label>
       <div class="col-xs-4">
-        <input   name="selectedQ" type="text" class="form-control" id="addQuestion" placeholder="Enter Question">
+        <input name="selectedQ" type="text" class="form-control" id="addQuestion" placeholder="Enter Question">
       </div>
     </div>
     <div class="form-group">
@@ -47,7 +51,6 @@
         <input type="text" class="form-control" id="addAnswer" placeholder="Enter Answer">
       </div>
     </div>
-    <button type="submit" class="btn btn-default">Add</button>
+    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Add</button>
   </form>
-  <button class="btn btn-default pull-right" type="submit" (click)="onSubmitQuestion(selectedQ)">Submit</button>
 </div>

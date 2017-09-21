@@ -13,12 +13,16 @@ export class AuthService {
         },
         body: JSON.stringify(post)
       }
-       fetch('http://localhost:3000/signup', settings)
+       fetch('https://rocky-castle-86279.herokuapp.com/signup', settings)
        .then((data) => {
         return data.json()
       })
       .then(res => {
+        if(res.error){
+          alert(res.error)
+        } else {
         localStorage.setItem('token', res.data)
+        }
       })
     }
 
@@ -35,7 +39,7 @@ signIn(email: string, password: string) {
     body: JSON.stringify(post)
   }
 
-   fetch('http://localhost:3000/signin', settings)
+   fetch('https://rocky-castle-86279.herokuapp.com/signin', settings)
    .then((data) => {
     return data.json()
   })
@@ -44,7 +48,7 @@ signIn(email: string, password: string) {
       alert(res.error)
     } else {
     localStorage.setItem('token', res.data)
-  }
+    }
   })
 }
 

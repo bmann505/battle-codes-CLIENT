@@ -13,7 +13,7 @@ export class SelectQuestionsComponent implements OnInit {
   ngOnInit() {
     console.log(this.questionsService.questions.length)
     if (this.questionsService.questions.length !== 0 ) {
-  this.questions = this.questionsService.questions
+      this.questions = this.questionsService.questions
     }
 
   }

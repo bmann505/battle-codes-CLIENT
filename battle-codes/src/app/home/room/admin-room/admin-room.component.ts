@@ -9,7 +9,7 @@ import * as io from 'socket.io-client'
   styleUrls: ['./admin-room.component.css']
 })
 export class AdminRoomComponent implements OnInit {
-    socket=io('http://localhost:3000')
+  socket=io('https://rocky-castle-86279.herokuapp.com/')
   selectQuestion = false;
   buttonSelectQuestion = false;
   grade = true;

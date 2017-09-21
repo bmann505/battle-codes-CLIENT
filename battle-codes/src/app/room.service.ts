@@ -18,7 +18,7 @@ export class roomService {
   createNewRoom(room) {
 
     let socket
-    socket = io('http://localhost:3000/')
+    socket = io('https://rocky-castle-86279.herokuapp.com/')
     let data = {
       room: room,
       handle: '',
@@ -32,7 +32,7 @@ export class roomService {
 
 resRoom() {
 
-  let socket = io('http://localhost:3000/');
+  let socket = io('https://rocky-castle-86279.herokuapp.com/');
   socket.on('message',  (data) =>{
    return data.message
     });
@@ -47,7 +47,7 @@ teamCreated(teamName) {
 }
 
 emitQuestions(question) {
-let socket = io('http://localhost:3000/');
+let socket = io('https://rocky-castle-86279.herokuapp.com/');
 let data = {
   room: this.room.name,
   handle: '',
@@ -69,7 +69,7 @@ resDataFromTeam(socket){
 }
 socket.emit('room', data);
   socket.on('message', (data)=> {
- if ( data.message != "") {
+ if ( data.handle != "") {
 this.pushifNotExist(data,this.teams)
  }
 
@@ -88,7 +88,8 @@ pushifNotExist(data, teams){
            teams[i].score = data.score
      }
  }
- if(!seen) teams.push(data)
+ console.log(data)
+ if(!seen && data.handle !== ""  && data.handle !== undefined ) teams.push(data)
 
  }
 

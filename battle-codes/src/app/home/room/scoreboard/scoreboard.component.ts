@@ -7,7 +7,7 @@ import * as io from 'socket.io-client'
   styleUrls: ['./scoreboard.component.css']
 })
 export class ScoreboardComponent implements OnInit {
-    socket=io('http://localhost:3000')
+    socket=io('https://rocky-castle-86279.herokuapp.com/')
   constructor(private roomService: roomService) { }
 teams=this.roomService.teams
   ngOnInit() {

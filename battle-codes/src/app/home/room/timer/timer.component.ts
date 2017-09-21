@@ -10,7 +10,7 @@ import * as io from 'socket.io-client'
   providers: [],
 })
 export class TimerComponent implements OnInit {
-  socket=io('http://localhost:3000')
+  socket=io('https://rocky-castle-86279.herokuapp.com/')
   constructor (private roomService: roomService, private timerTrackService: timerTrackService) {
 
   }

@@ -3,22 +3,26 @@
     <div class="panel panel-heading">
       <h2>Grade:</h2>
     </div>
+    <div class="questionList">
     <table class="center-block table table-hover row">
       <thead>
         <tr>
-          <th class="col-sm-5">Team</th>
-          <th class="col-sm-6">Answer</th>
-          <th class="col-sm-6">Right / Wrong</th>
+          <th class="col-sm-4">Team</th>
+          <th class="col-sm-7">Answer</th>
+          <th class="col-sm-4">Correct?</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let team of teams">
           <th>{{team.handle}}</th>
           <th>{{team.message}}</th>
-          <th><button (click)="gradeUp(team)" class="btn btn-success glyphicon glyphicon-ok"></button> <button class="btn btn-danger glyphicon glyphicon-remove"></button></th>
+          <th><button (click)="gradeUp(team)" class="btn btn-success glyphicon glyphicon-ok"></button></th>
         </tr>
       </tbody>
     </table>
   </div>
-  <button type="submit" class="btn btn-default pull-right" (click)="onStartNewRound()">Start new round</button>
+  </div>
+  <button type="submit" class="btn btn-default pull-left" (click)="onStartNewRound()">Start new round</button>
 </div>
+
+<!-- <button class="btn btn-danger glyphicon glyphicon-remove"></button> -->

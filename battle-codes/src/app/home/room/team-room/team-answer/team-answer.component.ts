@@ -8,7 +8,7 @@ import * as io from 'socket.io-client'
   styleUrls: ['./team-answer.component.css']
 })
 export class TeamAnswerComponent implements OnInit {
-  socket=io('http://localhost:3000')
+  socket=io('https://rocky-castle-86279.herokuapp.com/')
    ToggleButton
   constructor(private roomService: roomService, private timerTrackService: timerTrackService) { }
 
@@ -20,7 +20,7 @@ export class TeamAnswerComponent implements OnInit {
             this.ToggleButton = !data.timerFlag
             console.log(this.ToggleButton)
           }
-        
+
 
   })
 }
