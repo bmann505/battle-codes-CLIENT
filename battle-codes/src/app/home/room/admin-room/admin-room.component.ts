@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { roomService } from 'app/room.service'
 import { questionsService } from 'app/questions.service'
-
+import * as io from 'socket.io-client'
 
 @Component({
   selector: 'app-admin-room',
@@ -9,6 +9,7 @@ import { questionsService } from 'app/questions.service'
   styleUrls: ['./admin-room.component.css']
 })
 export class AdminRoomComponent implements OnInit {
+    socket=io('http://localhost:3000')
   selectQuestion = false;
   buttonSelectQuestion = false;
   grade = true;
@@ -34,6 +35,8 @@ export class AdminRoomComponent implements OnInit {
     this.grade = false;
     this.timer = true;
     this.roomService.emitQuestions(this.questionsService.selectedQuestion);
+    this.roomService.submitTimer(this.socket, true)
+
   }
 
   onStartNewRound() {

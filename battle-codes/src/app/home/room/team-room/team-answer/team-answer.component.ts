@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { roomService } from 'app/room.service';
+import { timerTrackService } from 'app/timerTrack.service';
 import * as io from 'socket.io-client'
 @Component({
   selector: 'app-team-answer',
@@ -8,10 +9,21 @@ import * as io from 'socket.io-client'
 })
 export class TeamAnswerComponent implements OnInit {
   socket=io('http://localhost:3000')
-  constructor(private roomService: roomService) { }
+   ToggleButton
+  constructor(private roomService: roomService, private timerTrackService: timerTrackService) { }
 
   ngOnInit() {
-  }
+    this.roomService.submitTimer(this.socket, false)
+    this.socket.on('timer', (data) => {
+          console.log(data)
+          if (data.timerFlag !=undefined) {
+            this.ToggleButton = !data.timerFlag
+            console.log(this.ToggleButton)
+          }
+        
+
+  })
+}
  emitAnswer(answer){
    let data = {
    room: this.roomService.room.name,
@@ -22,5 +34,8 @@ export class TeamAnswerComponent implements OnInit {
  }
  console.log(data);
  this.socket.emit('room', data);
+
  }
+
+
 }

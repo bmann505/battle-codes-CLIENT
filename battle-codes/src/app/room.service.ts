@@ -2,6 +2,9 @@ import { EventEmitter } from '@angular/core';
 import * as io from 'socket.io-client'
 export class roomService {
 
+  flag={
+    stat:false
+  }
 
   room={
     name:''
@@ -89,4 +92,11 @@ pushifNotExist(data, teams){
 
  }
 
+submitTimer(socket, timerFlag){
+  let data = {
+  room: this.room.name,
+  timerFlag:timerFlag
+}
+socket.emit('room', data);
+}
 }
