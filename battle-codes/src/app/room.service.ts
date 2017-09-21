@@ -86,6 +86,9 @@ pushifNotExist(data, teams){
      }
      if (teams[i].handle == data.handle && data.score !=0) {
            teams[i].score = data.score
+           teams=teams.sort(function(a,b){
+             return b.score - a.score
+          })
      }
  }
  console.log(data)
