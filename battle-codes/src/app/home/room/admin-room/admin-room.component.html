@@ -5,10 +5,12 @@
   <app-posted-question
     [hidden]="!postedQuestion">
   </app-posted-question>
-  <app-select-questions
-    [onSelectQuestion]="onSelectQuestion.bind(this)"
-    [hidden]="buttonSelectQuestion">
-  </app-select-questions>
+  <div>
+    <app-select-questions
+      [onSelectQuestion]="onSelectQuestion.bind(this)"
+      [hidden]="buttonSelectQuestion">
+    </app-select-questions>
+  </div>
   <app-question-list
     [hidden]="!selectQuestion"
     [onSubmitQuestion]="onSubmitQuestion.bind(this)">

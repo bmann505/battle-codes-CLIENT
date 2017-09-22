@@ -1,7 +1,7 @@
-<div class="answer col-sm-6">
+<div class="answer col-xs-12 col-sm-6">
   <form class="" action="index.html" method="post">
     <label>Answer:</label>
-    <textarea [(ngModel)]="answer" name="answer" class="form-control" rows="5"></textarea>
+    <textarea [(ngModel)]="answer" name="answer" class="form-control" rows="8"></textarea>
     <button [disabled]="ToggleButton" (click)="emitAnswer(answer)" type="submit" class="btn btn-default pull-right">Send</button>
   </form>
 </div>
