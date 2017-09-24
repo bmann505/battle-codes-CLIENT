@@ -10,7 +10,7 @@ https://battle-code-royale.firebaseapp.com/
 
 ## To Set up the Project
 1. Fork and clone this repo
-1. cd battle-codes
+1. $ cd battle-codes
 1. $ npm install
 1. $ ng serve
 
@@ -23,7 +23,7 @@ https://battle-code-royale.firebaseapp.com/
 * Angular 4
 * Bootstrap
 
-##Authors
+## Authors
 * Yousif Al timimie
 * Brian Mann
 * Sally Bouley
