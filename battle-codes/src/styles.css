@@ -37,7 +37,6 @@ code {
 }
 
 .scoreboard {
-  height: 65vh;
   margin-left: 3%;
 }
 
@@ -54,10 +53,6 @@ code {
 
 .grading {
   height: 50vh;
-}
-
-.questionButton {
-  margin: 0 0 5% 40%;
 }
 
 .tableTitle {
@@ -88,15 +83,18 @@ code {
   margin-bottom: 3%;
 }
 
+.postedQuestion {
+  display: inline-block;
+  margin: 3% 10%;
+}
 
 .answer {
   height: 50vh;
-  /*margin-left: 10%;*/
 }
 
 @media screen and (min-width: 480px) {
   .answer {
-    margin-left: 10$
+    margin-left: 3%;
   }
 }
 
