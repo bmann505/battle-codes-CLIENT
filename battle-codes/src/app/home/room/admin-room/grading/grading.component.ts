@@ -7,25 +7,23 @@ import * as io from 'socket.io-client'
   styleUrls: ['./grading.component.css']
 })
 export class GradingComponent implements OnInit {
-    socket=io('https://rocky-castle-86279.herokuapp.com/')
-@Input() onStartNewRound: () => void;
-ToggleButton
- teams=this.roomService.teams
+  socket=io('https://rocky-castle-86279.herokuapp.com/')
+  @Input() onStartNewRound: () => void;
+  ToggleButton
+  teams=this.roomService.teams
   constructor(private roomService: roomService) { }
 
   ngOnInit() {
   this.roomService.resDataFromTeam(this.socket)
   this.socket.on('timer', (data) => {
-        console.log(data)
-        if (data.timerFlag !=undefined) {
-          this.ToggleButton = !data.timerFlag
-          console.log(this.ToggleButton)
-        }
-      })
-}
-gradeUp(team){
-team.score +=1
-this.socket.emit('room', team);
-}
+    if (data.timerFlag !=undefined) {
+      this.ToggleButton = !data.timerFlag
+    }
+  })
+  }
+  gradeUp(team){
+  team.score +=1
+  this.socket.emit('room', team);
+  }
 
 }

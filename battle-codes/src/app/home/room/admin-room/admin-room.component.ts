@@ -8,6 +8,7 @@ import * as io from 'socket.io-client'
   templateUrl: './admin-room.component.html',
   styleUrls: ['./admin-room.component.css']
 })
+
 export class AdminRoomComponent implements OnInit {
   socket=io('https://rocky-castle-86279.herokuapp.com/')
   selectQuestion = false;
@@ -18,8 +19,7 @@ export class AdminRoomComponent implements OnInit {
   @Input() startTimer: () => void;
   constructor(private roomService: roomService, private questionsService: questionsService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSelectQuestion() {
      this.selectQuestion = true;
@@ -30,7 +30,6 @@ export class AdminRoomComponent implements OnInit {
 
 
   onSubmitQuestion(question) {
-    console.log(question)
     this.postedQuestion = true;
     this.selectQuestion = false;
     this.buttonSelectQuestion = true;
@@ -47,7 +46,5 @@ export class AdminRoomComponent implements OnInit {
     this.timer = false;
   }
 
-  onFinishGame() {
-    console.log("test")
-  }
+  onFinishGame() {}
 }

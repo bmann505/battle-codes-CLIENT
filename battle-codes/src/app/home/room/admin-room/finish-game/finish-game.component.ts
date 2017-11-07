@@ -6,10 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./finish-game.component.css']
 })
 export class FinishGameComponent implements OnInit {
-@Input() onFinishGame: () => void;
+  @Input() onFinishGame: () => void;
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

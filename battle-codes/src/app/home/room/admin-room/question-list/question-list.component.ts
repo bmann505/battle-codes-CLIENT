@@ -7,8 +7,8 @@ import { questionsService } from 'app/questions.service';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
-questions
-@Input() onSubmitQuestion: () => void;
+  questions
+  @Input() onSubmitQuestion: () => void;
   constructor(private questionsService: questionsService )  { }
 
  selectedQ
@@ -17,16 +17,13 @@ questions
     .then((data) => {
      return data.json()
    })
-   .then(res => {
-     console.log(res)
-     this.questions = res;
-    //  console.log(this.questionsService.questions)
-    this.questionsService.questions= this.questions
-  })
+    .then(res => {
+      this.questions = res;
+      this.questionsService.questions= this.questions
+    })
   }
 
-
-radioTest(question) {
-  this.selectedQ = question.question_title
-}
+  radioTest(question) {
+    this.selectedQ = question.question_title
+  }
 }
