@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { roomService } from 'app/room.service';
-import { questionsService } from 'app/questions.service'
-import * as io from 'socket.io-client'
+import { questionsService } from 'app/questions.service';
+import * as io from 'socket.io-client';
 
 @Component({
   selector: 'app-posted-question',
@@ -10,11 +10,11 @@ import * as io from 'socket.io-client'
 })
 
 export class PostedQuestionComponent implements OnInit {
-
   room = this.roomService.room.name
+  question=""
   socket=io('https://rocky-castle-86279.herokuapp.com/')
 
-  constructor(private roomService: roomService) { }
+  constructor(private roomService: roomService) {}
 
   ngOnInit() {
     let data = {
@@ -23,13 +23,13 @@ export class PostedQuestionComponent implements OnInit {
     message:"",
     question: ""
   }
-
   this.socket.emit('room', data);
   this.socket.on('message', (data)=> {
-    if (data.question !="") {
-      this.question=data.question
-    }
-  })
+  if (data.question !="") {
+    this.question=data.question
+  }
+
+   })
   }
 
 }
