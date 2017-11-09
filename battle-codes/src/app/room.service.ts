@@ -1,6 +1,8 @@
 import { EventEmitter } from '@angular/core';
-import * as io from 'socket.io-client'
+import * as io from 'socket.io-client';
+
 export class roomService {
+ socket=io('https://rocky-castle-86279.herokuapp.com/');
 
   flag={
     stat:false
@@ -16,9 +18,6 @@ export class roomService {
   teams=[]
 
   createNewRoom(room) {
-
-    let socket
-    socket = io('https://rocky-castle-86279.herokuapp.com/')
     let data = {
       room: room,
       handle: '',
@@ -26,16 +25,13 @@ export class roomService {
       question: '',
       score: 0
     }
-    socket.emit('room', data)
+    this.socket.emit('room', data)
   };
 
   resRoom() {
-
-    let socket = io('https://rocky-castle-86279.herokuapp.com/');
-    socket.on('message',  (data) =>{
-     return data.message
-      });
-
+    this.socket.on('message',  (data) =>{
+      return data.message
+    });
   }
 
   roomCreated(roomName) {
@@ -46,15 +42,14 @@ export class roomService {
   }
 
   emitQuestions(question) {
-  let socket = io('https://rocky-castle-86279.herokuapp.com/');
-  let data = {
-    room: this.room.name,
-    handle: '',
-    message: '',
-    question: question,
-    score: 0
-    }
-    socket.emit('room', data)
+    let data = {
+      room: this.room.name,
+      handle: '',
+      message: '',
+      question: question,
+      score: 0
+      }
+    this.socket.emit('room', data)
   }
 
 
@@ -67,8 +62,8 @@ export class roomService {
     score :0
   }
   socket.emit('room', data);
-    socket.on('message', (data)=> {
-   if ( data.handle != "") {
+  socket.on('message', (data)=> {
+    if ( data.handle != "") {
   this.pushifNotExist(data,this.teams)
    }
 
@@ -91,7 +86,9 @@ export class roomService {
        }
    }
 
-  if(!seen && data.handle !== ""  && data.handle !== undefined ) teams.push(data)
+  if(!seen && data.handle !== ""  && data.handle !== undefined ) {
+    teams.push(data)
+  }
 
    }
 

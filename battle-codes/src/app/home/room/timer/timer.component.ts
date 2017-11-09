@@ -24,7 +24,6 @@ export class TimerComponent implements OnInit {
 
   this.roomService.submitTimer(this.socket, false)
     this.socket.on('timer', (data)=> {
-          console.log(data)
       if (data.timerFlag) {
            this.timerTrackService.flag.status=true
           this.startTimer()
@@ -39,7 +38,7 @@ export class TimerComponent implements OnInit {
           t => {
               this.ticks = t;
 
-              this.secondsDisplay = 30 - this.getSeconds(this.ticks);
+              this.secondsDisplay = 60 - this.getSeconds(this.ticks);
               if (this.secondsDisplay ==0) {
                            this.roomService.submitTimer(this.socket, false)
                        this.sub.unsubscribe()
