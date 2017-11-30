@@ -29,7 +29,8 @@ export class roomService {
   };
 
   resRoom() {
-    this.socket.on('message',  (data) =>{
+    let socket = io('https://rocky-castle-86279.herokuapp.com/');
+    socket.on('message',  (data) =>{
       return data.message
     });
   }
@@ -42,14 +43,15 @@ export class roomService {
   }
 
   emitQuestions(question) {
-    let data = {
-      room: this.room.name,
-      handle: '',
-      message: '',
-      question: question,
-      score: 0
-      }
-    this.socket.emit('room', data)
+    let socket = io('https://rocky-castle-86279.herokuapp.com/');
+   let data = {
+     room: this.room.name,
+     handle: '',
+     message: '',
+     question: question,
+     score: 0
+     }
+     socket.emit('room', data)
   }
 
 
