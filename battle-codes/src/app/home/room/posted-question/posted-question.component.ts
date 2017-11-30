@@ -25,8 +25,8 @@ export class PostedQuestionComponent implements OnInit {
   }
   this.socket.emit('room', data);
   this.socket.on('message', (data)=> {
-  if (data.question !="") {
-    this.question=data.question
+    if (data.question !="") {
+      this.question=data.question
   }
 
    })

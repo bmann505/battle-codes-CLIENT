@@ -64,7 +64,7 @@ export class roomService {
   socket.emit('room', data);
   socket.on('message', (data)=> {
     if ( data.handle != "") {
-  this.pushifNotExist(data,this.teams)
+      this.pushifNotExist(data,this.teams)
    }
 
   })
