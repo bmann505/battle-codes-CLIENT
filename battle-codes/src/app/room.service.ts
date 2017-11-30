@@ -86,9 +86,7 @@ export class roomService {
        }
    }
 
-  if(!seen && data.handle !== ""  && data.handle !== undefined ) {
-    teams.push(data)
-  }
+  if(!seen && data.handle !== ""  && data.handle !== undefined ) teams.push(data)
 
    }
 
