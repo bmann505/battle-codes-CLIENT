@@ -11,7 +11,7 @@ import * as io from 'socket.io-client';
 
 export class PostedQuestionComponent implements OnInit {
   room = this.roomService.room.name
-  question="sddfvdsfdsfdsfdf"
+  question="Question will be posted here!"
   socket=io('https://rocky-castle-86279.herokuapp.com/')
 
   constructor(private roomService: roomService) {}
