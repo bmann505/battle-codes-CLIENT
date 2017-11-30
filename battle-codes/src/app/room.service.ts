@@ -2,7 +2,6 @@ import { EventEmitter } from '@angular/core';
 import * as io from 'socket.io-client';
 
 export class roomService {
- socket=io('https://rocky-castle-86279.herokuapp.com/');
 
   flag={
     stat:false
@@ -18,6 +17,7 @@ export class roomService {
   teams=[]
 
   createNewRoom(room) {
+    let socket = io('https://rocky-castle-86279.herokuapp.com/');
     let data = {
       room: room,
       handle: '',
@@ -25,7 +25,7 @@ export class roomService {
       question: '',
       score: 0
     }
-    this.socket.emit('room', data)
+    socket.emit('room', data)
   };
 
   resRoom() {
@@ -93,6 +93,7 @@ export class roomService {
    }
 
   submitTimer(socket, timerFlag){
+
     let data = {
     room: this.room.name,
     timerFlag:timerFlag
